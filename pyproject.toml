@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "python-selenium"
+version = "0.1.0"
+description = ""
+authors = ["Bruno Fioreze <bruno-fioreze-@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11.0,<3.13.0" 
+selenium = "^4.15.0"
+beautifulsoup4 = "^4.12.2"
+pandas = "^2.1.2"
+lxml = "^4.9.3"
+html5lib = "^1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
