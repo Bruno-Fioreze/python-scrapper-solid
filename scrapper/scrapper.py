@@ -18,7 +18,7 @@ class FindElement:
         return element
 
 class ExtractElementToHTML:
-    def html(self, element):
+    def execute(self, element):
         return element.get_attribute('outerHTML') 
 
 

@@ -12,16 +12,16 @@ from .data_frame import *
 
 scrapper = Scrapper(webdriver=webdriver.Firefox)
 
-content_page = ExtractContentPageByUrl(driver=scrapper.driver)
-content_page.execute(url="https://ge.globo.com/futebol/brasileirao-serie-a/")
+content_page_by_url = ExtractContentPageByUrl(driver=scrapper.driver)
+content_page_by_url.execute(url="https://ge.globo.com/futebol/brasileirao-serie-a/")
 
 sleep(2)
 
 find_element = FindElement(driver=scrapper.driver) 
 element = find_element.execute(by=By.XPATH, value="/html/body/div[2]/main/div[2]/div/section[1]/article/section[1]")
 
-extract_element = ExtractElementToHTML()  
-html_content = extract_element.html(element=element)
+extract_element_to_html = ExtractElementToHTML()  
+html_content = extract_element_to_html.execute(element=element)
 
 parser = ParserHtml(engine=BeautifulSoup)
 engine = parser.execute(html_content=html_content)
