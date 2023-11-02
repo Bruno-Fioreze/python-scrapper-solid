@@ -32,9 +32,6 @@ tables = extract_all_data.execute(_type="table")
 data_frame_reader = DataFrameReader(tables)
 dataframes = data_frame_reader.read_dataframes()
 
-data_frame_reader = DataFrameReader(tables)
-dataframes = data_frame_reader.read_dataframes()
-
 data_frame_concatenator = DataFrameConcatenator()
 df = data_frame_concatenator.concat_dataframes(dataframes, axis=1)
 
